@@ -34,11 +34,12 @@ and open the template in the editor.
                     }
                     ,success:function(resultado){
                         $("#mensaje").html(resultado);
-                }});    
-                }
+                    }
+                });    
+            }//Cierre IF Valida blancis
         else
             alert("Debe agregar un usuario y clave");
-            });
-    });
+        });//Click Botón enviar
+    });//Function Ready de la página
     </script>
 </html>

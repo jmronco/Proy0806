@@ -11,7 +11,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <form id="frmusuario" action="/Controlador/ValidaUsuario.php" method="post">
+        <form id="frmusuario" action="Controlador/ValidaUsuario.php" method="post">
             <div><label>Usuario:</label><input id="nomusuario" type="text" name="nomusuario" ></div>
             <div><label>Clave:</label><input id="clave" type="password" name="clave" ></div>
             <input id="enviar" type="button" onclick="" value="Enviar">

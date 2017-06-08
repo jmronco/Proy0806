@@ -28,8 +28,10 @@ and open the template in the editor.
         if($("#nomusuario").val()!="" && $("#clave").val()!=""){
             /*$("#frmusuario").submit();*/
                 $.ajax({url:"Controlador/ValidaUsuario.php"
-                    ,type:post
-                    ,data{nomusuario:$("#nomusuario").val(),cale:$("#clave").val()}
+                    ,type:'post'
+                    ,data:{'nomusuario':$("#nomusuario").val(),
+                        'clave':$("#clave").val()
+                    }
                     ,success:function(resultado){
                         $("#mensaje").html(resultado);
                 }});    

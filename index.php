@@ -15,6 +15,7 @@ and open the template in the editor.
             <div><label>Usuario:</label><input id="nomusuario" type="text" name="nomusuario" ></div>
             <div><label>Clave:</label><input id="clave" type="password" name="clave" ></div>
             <input id="enviar" type="button" onclick="" value="Enviar">
+            <div id="mensaje"></div>
         </form>
         
     </body>
@@ -24,8 +25,15 @@ and open the template in the editor.
             /*$("form").hide();
             alert("You just hide the form ;-)" + $("#nomusuario").val());*/
         
-        if($("#nomusuario").val()!="" && $("#clave").val()!="")
-            $("#frmusuario").submit();
+        if($("#nomusuario").val()!="" && $("#clave").val()!=""){
+            /*$("#frmusuario").submit();*/
+                $.ajax({url:"Controlador/ValidaUsuario.php"
+                    ,type:post
+                    ,data{nomusuario:$("#nomusuario").val(),cale:$("#clave").val()}
+                    ,success:function(resultado){
+                        $("#mensaje").html(resultado);
+                }});    
+                }
         else
             alert("Debe agregar un usuario y clave");
             });
